@@ -25,13 +25,7 @@
 }
 
 #chongzhib1 {
-	border: 0;
-	outline: none;
-	width: 200px;
-	height: 30px;
-	border-radius: 5px;
-	background-color: #D2E9FF;
-	cursor: pointer;
+	
 }
 
 #chongzhib1:hover {
@@ -157,7 +151,8 @@
 
 	<!--设置修改信息跳转和颜色变化-->
 	function updateUserInfo() {
-		document.getElementById("User").style.display = "none";
+		
+	document.getElementById("User").style.display = "none";
 		document.getElementById("Class").style.display = "none";
 		document.getElementById("Score").style.display = "none";
 		document.getElementById("div1").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0);";
@@ -173,9 +168,7 @@
 		var userNickname = document.getElementById("userNickname").value;
 		var head_image = document.getElementById("head_image").value;
 		var head_image = document.getElementById("userid").value;
-		document.getElementById("userid").value =
-<%=session.getAttribute("id")%>
-	;
+		document.getElementById("userid").value =<%=session.getAttribute("id")%>;
 
 		if (userName == null || userName == "") {
 			alert("用户名为空！");
@@ -282,7 +275,7 @@
 				style="font-family: '华文行楷'; color: white; float: left; font-size: 36px; margin-left: 50px; margin-top: 30px;">
 				教务管理系统</h1>
 			<h1
-				style="font-family: '华文行楷'; color: white; float: right; margin-left: 10px; margin-top: 32px; font-size: 24px;">
+				style="font-family: '华文行楷'; color: white; float:right; margin-top: 32px; font-size: 24px;">
 				欢迎管理员,<%=rs0.getString("user_name")%></h1>
 			<h1
 				style="font-family: '华文行楷'; font-size: 20px; margin-top: 5px; color: white; cursor: pointer; text-decoration: underline; position: absolute; right: 10px;"
@@ -292,7 +285,7 @@
 		<div
 			style="width: 12%; height: 655px; background-color: rgba(50, 50, 50, 0.6); float: left;">
 			<!--//功能-->
-			<div id="div1" style="width: 100%; height: 12%; cursor: pointer"
+			<div id="div1" style="width: 100%; height: 12%; cursor: pointer;"
 				onclick="lookUser()">
 				<br /> <span
 					style="margin-left: 35px; color: white; font-size: 20px; font-family: 楷体; cursor: pointer;">☼
@@ -439,24 +432,24 @@
 										<tr>
 											<td>学生编号：</td>
 											<td><input type="text" name="userId1" id="userId1"
-												style="border-radius: 5px; height: 20px" value=""></td>
+												style="border-radius: 5px; border:0 ; height: 20px" value=""></td>
 										</tr>
 										<tr style="width: 20px; height: 30px;"></tr>
 										<tr>
 											<td>课程名称：</td>
 											<td><input type="text" name="courseName" id="courseName"
-												style="border-radius: 5px; height: 20px" value=""></td>
+												style="border-radius: 5px;  border:0 ; height: 20px" value=""></td>
 										</tr>
 										<tr style="width: 20px; height: 30px;"></tr>
 										<tr>
 											<td>课程节数：</td>
 											<td><input type="text" name="courseTime" id="courseTime"
-												style="border-radius: 5px; height: 20px" value=""></td>
+												style="border-radius: 5px;  border:0 ; height: 20px" value=""></td>
 										</tr>
 										<tr style="width: 20px; height: 30px;"></tr>
 										<tr>
 											<td>课程周几：</td>
-											<td><select name="courseDay" style="width: 163px">
+											<td><select name="courseDay" style="width: 155px; border:0 ;height: 20px;border-radio:5px; ">
 													<option value="">--请选择--</option>
 													<option value="1">周一</option>
 													<option value="2">周二</option>
@@ -511,23 +504,23 @@
 										<input type="text" id="userid" name="userid" value=""
 											style="display: none;"> 姓名：<input type="text"
 											name="userName" id="userName" value=""
-											style="border-radius: 5px; height: 20px"><br /> <br />
+											style="border-radius: 5px; border:0 ; height: 20px"><br /> <br />
 										密码：<input type="password" name="userPass" id="userPass"
-											value="" style="border-radius: 5px; height: 20px"><br />
+											value="" style="border-radius: 5px; border:0 ; height: 20px"><br />
 										<br /> 昵称：<input type="text" name="userNickname"
 											id="userNickname" value=""
-											style="border-radius: 5px; height: 20px"><br /> <br />
+											style="border-radius: 5px; border:0 ; height: 20px"><br /> <br />
 										出生日期：<input type="date" name="userDate" id="userDate" value=""
-											style="border-radius: 5px; height: 20px"><br /> <br />
+											style="border-radius: 5px; border:0 ; height: 23px;width: 123px;"><br /> <br />
 										性别：<input type="radio" value="男" name="useSex"
 											style="color: grey;" />&nbsp;男&nbsp; <input type="radio"
 											value="女" name="userSex" style="color: grey;" />&nbsp;女&nbsp;<br />
 										<br /> 年龄：<input type="text" name="userAge" id="userAge"
-											value="" style="border-radius: 5px; height: 20px"><br />
+											value="" style="border-radius: 5px; border:0 ; height: 20px"><br />
 										<br /> 邮箱：<input type="text" name="userEmail" id="userEmail"
-											value="" style="border-radius: 5px; height: 20px"><br />
+											value="" style="border-radius: 5px; border:0 ; height: 20px"><br />
 										<br /> 头像：<input type="file" name="head_image"
-											id="head_image" value=""><br /> <br /> <input
+											id="head_image" value="" style="border: 0;outline: 0;border-radius: 5px;"><br /> <br /> <input
 											type="submit" value="保存" id="baocunb3" /> <br /> <br /> <input
 											type="reset" value="重置" id="chongzhib3" />
 									</div>

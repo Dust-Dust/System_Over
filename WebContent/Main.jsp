@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>教务管理系统—学生</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <style>
 
 /*保存按钮设置*/
@@ -72,26 +73,24 @@
 
 	<!--设置个人信息跳转和颜色变化-->
 	function lookUser() {
-		document.getElementById("User").style.display = "block";
 		document.getElementById("Class").style.display = "none";
 		document.getElementById("Score").style.display = "none";
 		document.getElementById("SetUser").style.display = "none";
-		document.getElementById("div1").style = "width: 100%; height: 12%;background-color:#6C6C6C";
-		document.getElementById("div2").style = "width: 100%; height: 12%;background-color:#3C3C3C";
-		document.getElementById("div3").style = "width: 100%; height: 12%;background-color:#3C3C3C";
-		document.getElementById("div4").style = "width: 100%; height: 12%;background-color:#3C3C3C";
+		document.getElementById("div1").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0.4);";
+		document.getElementById("div2").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0);";
+		document.getElementById("div3").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0);";
+		document.getElementById("div4").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0);";
 	};
 
 	<!--设置查询课表跳转和颜色变化-->
 	function lookClass() {
 		document.getElementById("User").style.display = "none";
-		document.getElementById("Class").style.display = "block";
 		document.getElementById("Score").style.display = "none";
 		document.getElementById("SetUser").style.display = "none";
-		document.getElementById("div1").style = "width: 100%; height: 12%;background-color:#3C3C3C";
-		document.getElementById("div2").style = "width: 100%; height: 12%;background-color:#3C3C3C";
-		document.getElementById("div3").style = "width: 100%; height: 12%;background-color:#6C6C6C";
-		document.getElementById("div4").style = "width: 100%; height: 12%;background-color:#3C3C3C";
+		document.getElementById("div1").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0);";
+		document.getElementById("div2").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0);";
+		document.getElementById("div3").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0.4);";
+		document.getElementById("div4").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0);";
 
 	};
 
@@ -99,12 +98,11 @@
 	function lookScore() {
 		document.getElementById("User").style.display = "none";
 		document.getElementById("Class").style.display = "none";
-		document.getElementById("Score").style.display = "block";
 		document.getElementById("SetUser").style.display = "none";
-		document.getElementById("div1").style = "width: 100%; height: 12%;background-color:#3C3C3C";
-		document.getElementById("div2").style = "width: 100%; height: 12%;background-color:#6C6C6C";
-		document.getElementById("div3").style = "width: 100%; height: 12%;background-color:#3C3C3C";
-		document.getElementById("div4").style = "width: 100%; height: 12%;background-color:#3C3C3C";
+		document.getElementById("div1").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0);";
+		document.getElementById("div2").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0.4);";
+		document.getElementById("div3").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0);";
+		document.getElementById("div4").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0);";
 	};
 
 	<!--设置修改信息跳转和颜色变化-->
@@ -112,11 +110,10 @@
 		document.getElementById("User").style.display = "none";
 		document.getElementById("Class").style.display = "none";
 		document.getElementById("Score").style.display = "none";
-		document.getElementById("SetUser").style.display = "block";
-		document.getElementById("div1").style = "width: 100%; height: 12%;background-color:#3C3C3C";
-		document.getElementById("div2").style = "width: 100%; height: 12%;background-color:#3C3C3C";
-		document.getElementById("div3").style = "width: 100%; height: 12%;background-color:#3C3C3C";
-		document.getElementById("div4").style = "width: 100%; height: 12%;background-color:#6C6C6C";
+		document.getElementById("div1").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0);";
+		document.getElementById("div2").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0);";
+		document.getElementById("div3").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0);";
+		document.getElementById("div4").style = "width: 100%; height: 12%;background-color: rgba(0, 0, 0, 0.4);";
 	};
 
 	<!--设置验证输入框是否为空-->
@@ -150,9 +147,27 @@
 	}
 </script>
 
+<script>
+	$(document).ready(function() {
+		$("#div1").click(function() {
+			$("#User").fadeIn("slow");
+		})
+		$("#div2").click(function() {
+			$("#Score").fadeIn("slow");
+		})
+		$("#div3").click(function() {
+			$("#Class").fadeIn("slow");
+		})
+		$("#div4").click(function() {
+			$("#SetUser").fadeIn("slow");
+		})
+
+	})
+</script>
+
 <body>
 	<!--大盒子-->
-	<div id="big_box">
+	<div id="big_box" style="background-color: rgba(0, 0, 0, 0.1);">
 		<!--顶端盒子-->
 		<%
 			UserDao userDao0 = new UserDao();
@@ -161,45 +176,50 @@
 
 			}
 		%>
-		<div style="width: 100%; height: 95px; background-color: #005AB5;">
-			<img src="img/titlemain.png"
-				style="height: auto; float: left; width: auto; margin-left: 30px; margin-top: 15px" />
+		<div
+			style="width: 100%; height: 95px; background-color: rgba(0, 0, 127, 0.7);">
 			<h1
-				style="font-family: '华文行楷'; color: white; float: left; margin-left: 10px; margin-top: 32px; font-size: 24px;">
+				style="font-family: '华文行楷'; color: white; float: left; font-size: 36px; margin-left: 50px; margin-top: 30px;">
+				教务管理系统</h1>
+			<h1
+				style="font-family: '华文行楷'; color: white; float: right; margin-top: 32px; font-size: 24px;">
 				欢迎学生,<%=rs0.getString("user_name")%></h1>
 			<h1
-				style="font-family: '华文行楷'; float: left; font-size: 20px; margin-right: 1px; margin-top: 5px; color: white; cursor: pointer; text-decoration: underline"
+				style="font-family: '华文行楷'; font-size: 20px; margin-top: 5px; color: white; cursor: pointer; text-decoration: underline; position: absolute; right: 10px;"
 				onclick="window.location.href='Login.jsp'">退出系统</h1>
 		</div>
 		<!--左边功能盒子-->
 		<div
-			style="width: 12%; height: 655px; background-color: #3C3C3C; float: left;">
-			<!--功能-->
-			<div id="div1"
-				style="width: 100%; height: 12%; background-color: #6C6C6C;">
+			style="width: 12%; height: 655px; background-color: rgba(50, 50, 50, 0.6); float: left;">
+			<!--//功能-->
+			<div id="div1" style="width: 100%; height: 12%; cursor: pointer;"
+				onclick="lookUser()">
 				<br /> <span
-					style="margin-left: 40px; cursor: pointer; color: white;"
-					onclick="lookUser()">☼ 个人信息</span>
+					style="margin-left: 35px; color: white; font-size: 20px; font-family: 楷体; cursor: pointer;">☼
+					个人信息</span>
 			</div>
-			<div id="div2" style="width: 100%; height: 12%;">
+			<div id="div2" style="width: 100%; height: 12%; cursor: pointer;"
+				onclick="lookScore()">
 				<br /> <span
-					style="margin-left: 40px; cursor: pointer; color: white;"
-					onclick="lookScore()">☼ 查询成绩</span>
+					style="margin-left: 35px; color: white; font-size: 20px; font-family: 楷体; cursor: pointer;">☼
+					查询成绩</span>
 			</div>
-			<div id="div3" style="width: 100%; height: 12%;">
+			<div id="div3" style="width: 100%; height: 12%; cursor: pointer;"
+				onclick="lookClass()">
 				<br /> <span
-					style="margin-left: 40px; cursor: pointer; color: white;"
-					onclick="lookClass()">☼ 查询课表</span>
+					style="margin-left: 35px; color: white; font-size: 20px; font-family: 楷体; cursor: pointer;">☼
+					查询课表</span>
 			</div>
-			<div id="div4" style="width: 100%; height: 12%;">
+			<div id="div4" style="width: 100%; height: 12%; cursor: pointer;"
+				onclick="updateUserInfo()">
 				<br /> <span
-					style="margin-left: 40px; cursor: pointer; color: white;"
-					onclick="updateUserInfo()">☼ 修改信息</span>
+					style="margin-left: 35px; color: white; font-size: 20px; font-family: 楷体; cursor: pointer;">☼
+					修改信息</span>
 			</div>
 		</div>
 		<!--右边功能盒子-->
 		<div
-			style="width: 88%; height: 655px; background-color: lightblue; float: left;">
+			style="width: 88%; height: 655px; float: left;">
 
 			<!--个人信息界面-->
 			<div id="User"
@@ -376,21 +396,21 @@
 										<input type="text" id="userid" name="userid" value=""
 											style="display: none;"> 姓名：<input type="text"
 											name="userName" id="userName" value=""
-											style="border-radius: 5px; height: 20px"><br /> <br />
+											style="border-radius: 5px; border:0 ; height: 20px"><br /> <br />
 										密码：<input type="password" name="userPass" id="userPass"
-											value="" style="border-radius: 5px; height: 20px"><br />
+											value="" style="border-radius: 5px; border:0 ; height: 20px"><br />
 										<br /> 昵称：<input type="text" name="userNickname"
 											id="userNickname" value=""
-											style="border-radius: 5px; height: 20px"><br /> <br />
+											style="border-radius: 5px; border:0 ; height: 20px"><br /> <br />
 										出生日期：<input type="date" name="userDate" id="userDate" value=""
-											style="border-radius: 5px; height: 20px"><br /> <br />
+											style="border-radius: 5px; border:0 ; height: 23px;width: 123px;"><br /> <br />
 										性别：<input type="radio" value="男" name="useSex"
 											style="color: grey;" />&nbsp;男&nbsp; <input type="radio"
 											value="女" name="userSex" style="color: grey;" />&nbsp;女&nbsp;<br />
 										<br /> 年龄：<input type="text" name="userAge" id="userAge"
-											value="" style="border-radius: 5px; height: 20px"><br />
+											value="" style="border-radius: 5px; border:0 ; height: 20px"><br />
 										<br /> 邮箱：<input type="text" name="userEmail" id="userEmail"
-											value="" style="border-radius: 5px; height: 20px"><br />
+											value="" style="border-radius: 5px; border:0 ; height: 20px"><br />
 										<br /> 头像：<input type="file" name="head_image"
 											id="head_image" value=""><br /> <br /> <input
 											type="submit" value="保存" id="baocunb" /> <br /> <br /> <input
@@ -405,6 +425,8 @@
 			</div>
 		</div>
 	</div>
+	<script src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
+		color="0,0,0" opacity='1' count="166"></script>
 </body>
 
 </html>
