@@ -54,6 +54,19 @@
 	padding-bottom: 450px;
 	margin-bottom: 450px;
 }
+
+#div1:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+#div2:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+#div3:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+#div4:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
 </style>
 </head>
 <script type="text/javascript">

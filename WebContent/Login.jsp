@@ -9,6 +9,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <title>教务管理系统登录界面</title>
 <style type="text/css">
+/* 整个页面 */
 #big_box {
 	position: fixed;
 	top: 0;
@@ -20,7 +21,7 @@
 	-webkit-background-size: cover;
 	background-position: center 0;
 }
-
+/* 设置页面背景图片透明化 */
 .big_box {
 	filter: alpha(opacity = 50);
 	-moz-opacity: 0.5;
@@ -50,7 +51,7 @@
 	border-right-width: 0px;
 	border-top-width: 0px;
 	background-color: transparent;
-	outline: none color: white;
+	outline: none; color: white;
 }
 
 /* 登录框验证码输入框样式 */
@@ -60,9 +61,9 @@
 	border-right-width: 0px;
 	border-top-width: 0px;
 	background-color: transparent;
-	outline: none color: white;
+	outline: none; color: white;
 }
-
+/* 登录框样式 */
 #login_box {
 	border-radius: 5px;
 	background-color: rgba(2, 230, 255, 0.1);
@@ -102,7 +103,7 @@
 #RegisterButton:hover {
 	background-color: #a6a6a6;
 }
-
+/* 注册框的注册按钮 */
 #RegisterButton_r {
 	background-color: rgba(0, 170, 255, 0.5);
 	border-radius: 5px;
@@ -112,11 +113,11 @@
 	width: 150px;
 	height: 40px;
 }
-
+/* 注册框的注册按钮设置移动变色 */
 #RegisterButton_r:hover {
 	background-color: #3f9aea;
 }
-
+/* 注册框的返回按钮 */
 #BackButton_r {
 	background-color: rgba(188, 188, 188, 0.5);
 	border-radius: 5px;
@@ -126,11 +127,11 @@
 	width: 150px;
 	height: 40px;
 }
-
+/* 注册框的返回按钮设置移动变色 */
 #BackButton_r:hover {
 	background-color: #a6a6a6;
 }
-
+/* 注册框样式 */
 #register_box {
 	border-radius: 5px;
 	background-color: rgba(2, 230, 255, 0.1);
@@ -145,7 +146,7 @@
 	border-right-width: 0px;
 	border-top-width: 0px;
 	background-color: transparent;
-	outline: none color: white;
+	outline: none; color: white;
 }
 
 #username_r {
@@ -154,7 +155,7 @@
 	border-right-width: 0px;
 	border-top-width: 0px;
 	background-color: transparent;
-	outline: none color: white;
+	outline: none; color: white;
 }
 
 #userpass_r {
@@ -163,7 +164,7 @@
 	border-right-width: 0px;
 	border-top-width: 0px;
 	background-color: transparent;
-	outline: none color: white;
+	outline: none; color: white;
 }
 
 #userdate {
@@ -172,7 +173,7 @@
 	border-right-width: 0px;
 	border-top-width: 0px;
 	background-color: transparent;
-	outline: none color: white;
+	outline: none; color: white;
 }
 
 #useremail {
@@ -181,7 +182,7 @@
 	border-right-width: 0px;
 	border-top-width: 0px;
 	background-color: transparent;
-	outline: none color: white;
+	outline: none; color: white;
 }
 
 #userage {
@@ -190,15 +191,11 @@
 	border-right-width: 0px;
 	border-top-width: 0px;
 	background-color: transparent;
-	outline: none color: white;
+	outline: none; color: white;
 }
 
 /* 设置输入框字体颜色 */
 input::-webkit-input-placeholder {
-	color: white;
-}
-
-date::-webkit-datetime-placeholder {
 	color: white;
 }
 </style>

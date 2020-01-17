@@ -83,6 +83,19 @@
 #btn2:hover {
 	background-color: #ECF5FF;
 }
+
+#div1:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+#div2:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+#div3:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+#div4:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
 </style>
 
 </head>
@@ -258,11 +271,11 @@
 		</div>
 		<!--右边功能盒子-->
 		<div
-			style="width: 88%; height: 655px; background-color: lightblue; float: left;">
+			style="width: 88%; height: 655px; float: left;">
 
 			<!--个人信息界面-->
 			<div id="User"
-				style="width: 100%; height: 100%; float: left; margin-top: 2px">
+				style="width: 100%; height: 100%; float: left; margin-top: 2px;display: none;">
 				<div style="width: 100%; height: 10%; background-color: white;">
 					<br /> <span
 						style="font-family: '华文行楷'; color: black; margin-left: 20px; font-size: 24px">个人信息</span>
